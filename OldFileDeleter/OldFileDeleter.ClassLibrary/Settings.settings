@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="OldFileDeleter.ClassLibrary" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Directories" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="AvailableFreeSpaceTargetGB" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="OnlyDeleteFilesOlderThanDays" Type="System.Double" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DeleteEmptyDirectoriesOlderThanHours" Type="System.Double" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>
