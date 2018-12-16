@@ -6,4 +6,3 @@ C:\Users\Mihails\Source\Repos\OldFileDeleter\OldFileDeleter\OldFileDeleter.Class
 C:\Users\Mihails\Source\Repos\OldFileDeleter\OldFileDeleter\OldFileDeleter.ClassLibrary\obj\Debug\netcoreapp2.1\OldFileDeleter.ClassLibrary.AssemblyInfo.cs
 C:\Users\Mihails\Source\Repos\OldFileDeleter\OldFileDeleter\OldFileDeleter.ClassLibrary\obj\Debug\netcoreapp2.1\OldFileDeleter.ClassLibrary.dll
 C:\Users\Mihails\Source\Repos\OldFileDeleter\OldFileDeleter\OldFileDeleter.ClassLibrary\obj\Debug\netcoreapp2.1\OldFileDeleter.ClassLibrary.pdb
-C:\Users\Mihails\Source\Repos\OldFileDeleter\OldFileDeleter\OldFileDeleter.ClassLibrary\obj\Debug\netcoreapp2.1\OldFileDeleter.ClassLibrary.csprojAssemblyReference.cache

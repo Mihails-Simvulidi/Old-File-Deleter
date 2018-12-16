@@ -468,7 +468,7 @@
       },
       "OldFileDeleter.ClassLibrary/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v2.1",
+        "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "2.2.0",
           "System.Configuration.ConfigurationManager": "4.5.0"

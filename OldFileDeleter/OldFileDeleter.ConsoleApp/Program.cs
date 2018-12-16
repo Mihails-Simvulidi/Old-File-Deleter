@@ -29,7 +29,10 @@ namespace OldFileDeleter.ConsoleApp
                 }
             }
 
+#if DEBUG
+            Console.WriteLine("Press \"Enter\" to exit.");
             Console.ReadLine();
+#endif
         }
     }
 }

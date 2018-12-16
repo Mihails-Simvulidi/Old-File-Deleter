@@ -1,0 +1,8 @@
+C:\Users\Mihails\Source\Repos\OldFileDeleter\OldFileDeleter\OldFileDeleter.ClassLibrary\bin\Debug\netstandard2.0\OldFileDeleter.ClassLibrary.deps.json
+C:\Users\Mihails\Source\Repos\OldFileDeleter\OldFileDeleter\OldFileDeleter.ClassLibrary\bin\Debug\netstandard2.0\OldFileDeleter.ClassLibrary.dll
+C:\Users\Mihails\Source\Repos\OldFileDeleter\OldFileDeleter\OldFileDeleter.ClassLibrary\bin\Debug\netstandard2.0\OldFileDeleter.ClassLibrary.pdb
+C:\Users\Mihails\Source\Repos\OldFileDeleter\OldFileDeleter\OldFileDeleter.ClassLibrary\obj\Debug\netstandard2.0\OldFileDeleter.ClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Mihails\Source\Repos\OldFileDeleter\OldFileDeleter\OldFileDeleter.ClassLibrary\obj\Debug\netstandard2.0\OldFileDeleter.ClassLibrary.AssemblyInfoInputs.cache
+C:\Users\Mihails\Source\Repos\OldFileDeleter\OldFileDeleter\OldFileDeleter.ClassLibrary\obj\Debug\netstandard2.0\OldFileDeleter.ClassLibrary.AssemblyInfo.cs
+C:\Users\Mihails\Source\Repos\OldFileDeleter\OldFileDeleter\OldFileDeleter.ClassLibrary\obj\Debug\netstandard2.0\OldFileDeleter.ClassLibrary.dll
+C:\Users\Mihails\Source\Repos\OldFileDeleter\OldFileDeleter\OldFileDeleter.ClassLibrary\obj\Debug\netstandard2.0\OldFileDeleter.ClassLibrary.pdb
