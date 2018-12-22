@@ -7,6 +7,7 @@ namespace OldFileDeleter.ClassLibrary
 {
     public class FileDeleter
     {
+        private const decimal GB = 1024 * 1024 * 1024;
         private readonly long AvailableFreeSpaceTarget;
         private readonly DateTime DeleteEmptyDirectoriesCreatedBeforeUtc;
         private readonly DirectoryInfo[] Directories;
@@ -21,7 +22,7 @@ namespace OldFileDeleter.ClassLibrary
             AppSettingReader<Settings> appSettingReader = new AppSettingReader<Settings>(Settings.Default);
 
             AvailableFreeSpaceTarget = appSettingReader.GetAppSetting(s => s.AvailableFreeSpaceTargetGB)
-                .Select(v => (long)Math.Round(v * 1_000_000_000, MidpointRounding.AwayFromZero));
+                .Select(v => (long)Math.Round(v * GB, MidpointRounding.AwayFromZero));
 
             DeleteEmptyDirectoriesCreatedBeforeUtc = appSettingReader.GetAppSetting(s => s.DeleteEmptyDirectoriesOlderThanHours)
                 .Select(v => nowUtc.AddHours(-v));
@@ -66,7 +67,7 @@ namespace OldFileDeleter.ClassLibrary
                 LogDirectories(driveDirectories);
 
                 long availableFreeSpace = drive.AvailableFreeSpace;
-                Logger.LogInformation($"Available free space: {availableFreeSpace:N0} bytes, target: {AvailableFreeSpaceTarget:N0} bytes.");
+                Logger.LogInformation($"Available free space: {availableFreeSpace / GB:F1} GB, target: {AvailableFreeSpaceTarget / GB:F1} GB.");
 
                 if (availableFreeSpace >= AvailableFreeSpaceTarget)
                 {
@@ -87,7 +88,7 @@ namespace OldFileDeleter.ClassLibrary
                     directoryInMemory.DeleteEmptySubDirectories(DeleteEmptyDirectoriesCreatedBeforeUtc);
                 }
 
-                Logger.LogInformation($"Drive \"{drive.Name}\" cleanup complete. Available free space: {availableFreeSpace:N0}.");
+                Logger.LogInformation($"Drive \"{drive.Name}\" cleanup complete. Available free space: {availableFreeSpace / GB:F1} GB.");
             }
             catch (Exception e)
             {
