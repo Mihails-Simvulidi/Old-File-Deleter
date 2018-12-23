@@ -17,7 +17,7 @@ namespace OldFileDeleter.ClassLibrary
         {
             DirectoryInfo = directoryInfo;
             Logger = logger;
-            
+
             try
             {
                 foreach (FileSystemInfo fileSystemInfo in DirectoryInfo.EnumerateFileSystemInfos())
@@ -47,10 +47,15 @@ namespace OldFileDeleter.ClassLibrary
 
         public void DeleteEmptySubDirectories(DateTime olderThanUtc)
         {
-            foreach (DirectoryInMemory subDirectory in SubDirectories)
+            for (int i = SubDirectories.Count - 1; i >= 0; --i)
             {
+                DirectoryInMemory subDirectory = SubDirectories[i];
                 subDirectory.DeleteEmptySubDirectories(olderThanUtc);
-                subDirectory.DeleteIfEmpty();
+
+                if (subDirectory.DirectoryInfo.CreationTimeUtc < olderThanUtc)
+                {
+                    subDirectory.DeleteIfEmpty();
+                }
             }
         }
 
@@ -95,6 +100,11 @@ namespace OldFileDeleter.ClassLibrary
         internal void RemoveFile(FileInMemory fileInMemory)
         {
             Files.Remove(fileInMemory);
+        }
+
+        public override string ToString()
+        {
+            return DirectoryInfo.FullName;
         }
     }
 }

@@ -24,5 +24,10 @@ namespace OldFileDeleter.ClassLibrary
             FileInfo.Delete();
             ParentDirectory?.RemoveFile(this);
         }
+
+        public override string ToString()
+        {
+            return FileInfo.FullName;
+        }
     }
 }
