@@ -1,9 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using OldFileDeleter.ClassLibrary;
-using System;
 using Serilog;
-using System.Reflection;
+using System;
 
 namespace OldFileDeleter.ConsoleApp
 {
@@ -14,7 +13,7 @@ namespace OldFileDeleter.ConsoleApp
             Log.Logger = new LoggerConfiguration()
                 .Enrich.FromLogContext()
                 .WriteTo.Console()
-                .WriteTo.File($"{Assembly.GetExecutingAssembly().GetName().Name}-.log", rollingInterval: RollingInterval.Day)
+                .WriteTo.File($"{AppDomain.CurrentDomain.BaseDirectory}{AppDomain.CurrentDomain.FriendlyName}-.log", rollingInterval: RollingInterval.Day)
                 .CreateLogger();
 
             using (ServiceProvider serviceProvider = new ServiceCollection()
