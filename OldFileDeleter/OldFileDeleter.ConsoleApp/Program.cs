@@ -13,7 +13,7 @@ namespace OldFileDeleter.ConsoleApp
             Log.Logger = new LoggerConfiguration()
                 .Enrich.FromLogContext()
                 .WriteTo.Console()
-                .WriteTo.File($"{AppDomain.CurrentDomain.BaseDirectory}{AppDomain.CurrentDomain.FriendlyName}-.log", rollingInterval: RollingInterval.Day)
+                .WriteTo.File($"{AppDomain.CurrentDomain.BaseDirectory}logs\\{AppDomain.CurrentDomain.FriendlyName}-.log", rollingInterval: RollingInterval.Day)
                 .CreateLogger();
 
             using (ServiceProvider serviceProvider = new ServiceCollection()
